@@ -10,7 +10,7 @@ const scrapProduct = async (url) => {
     .find(".wt-max-width-full")
     .attr("src");
   const priceWithSymbols = $(".wt-text-title-03").text();
-  const price = Number(priceWithSymbols.replace(/[£+]/g, ""));
+  const price = priceWithSymbols.replace(/[£+Price:]/g, "");
   return {
     name,
     image,
