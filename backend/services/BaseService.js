@@ -5,7 +5,8 @@ class BaseService {
   async insert(object) {
     return await this.model.create(object);
   }
-  async find(id) {
+  async findOne(id) {
+    console.log(id);
     return this.model.findById(id);
   }
   async findAll() {

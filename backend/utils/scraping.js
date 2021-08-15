@@ -4,8 +4,7 @@ const cheerio = require("cheerio");
 const scrapProduct = async (url) => {
   const { data } = await axios.get(url);
   const $ = cheerio.load(data);
-  const nameDiv = $(".wt-mb-xs-2");
-  const name = nameDiv.find("h1").text().trim();
+  const name = $(".wt-mb-xs-2").find("h1").text().trim();
   const image = $(".wt-position-absolute")
     .find(".wt-max-width-full")
     .attr("src");

@@ -18,7 +18,7 @@ const findAllProducts = async (req, res, next) => {
 
 const findOneProduct = async (req, res, next) => {
   try {
-    const product = await ProductService.getOne();
+    const product = await ProductService.findOne(req.params.id);
     res.send(product);
   } catch (error) {}
 };
