@@ -6,7 +6,6 @@ class BaseService {
     return await this.model.create(object);
   }
   async findOne(id) {
-    console.log(id);
     return this.model.findById(id);
   }
   async findAll() {
