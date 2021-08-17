@@ -13,7 +13,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Products = () => {
   const products = useSelector((state) => state.products.products);
-  console.log(products);
   const classes = useStyles();
 
   return (

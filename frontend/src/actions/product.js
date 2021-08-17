@@ -3,9 +3,7 @@ import * as types from "./types";
 
 export const fetchProducts = () => async (dispatch) => {
   try {
-    console.log("heyy");
     const { data } = await api.fetchProducts();
-    console.log(data);
     dispatch({
       type: types.FETCH_PRODUCTS,
       payload: data,

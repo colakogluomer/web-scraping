@@ -13,7 +13,6 @@ import {
   Dialog,
   DialogActions,
   DialogContent,
-  DialogContentText,
   DialogTitle,
   Container,
   Grid,
@@ -46,7 +45,6 @@ const Info = () => {
 
   const dispatch = useDispatch();
 
-  const [file, setFile] = useState(null);
   const [open, setOpen] = useState(false);
 
   const { register, handleSubmit, reset } = useForm({
@@ -65,7 +63,6 @@ const Info = () => {
   };
   const clearForm = () => {
     reset();
-    setFile(null);
     handleClose();
   };
   return (
